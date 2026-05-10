@@ -1,9 +1,49 @@
 :root {
-    --bg-color: #0b0e14;
-    --card-bg: #161b22;
-    --accent-color: #58a6ff;
-    --text-color: #c9d1d9;
-    --header-color: #f0f6fc;
+    /* Cores extraídas da imagem de contribuições e do terminal */
+    --bg-color: #0d1117;        /* Fundo padrão do GitHub Dark */
+    --card-bg: #161b22;        /* Fundo dos cards levemente mais claro */
+    --accent-color: #2ea043;    /* Verde das contribuições (Snake) */
+    --text-color: #8b949e;      /* Cinza dos textos secundários */
+    --header-color: #ffffff;    /* Branco puro para títulos */
+    --secondary-accent: #238636; /* Verde um pouco mais escuro para hover */
+}
+
+/* ... (resto do código anterior se mantém igual) ... */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Gradiente ajustado para o verde/preto da imagem */
+    background: radial-gradient(circle at center, #0d2d19 0%, #0d1117 100%);
+}
+
+.primary { 
+    background: var(--accent-color); 
+    color: #fff; 
+}
+
+.secondary { 
+    border: 1px solid var(--accent-color); 
+    color: var(--accent-color); 
+}
+
+.btn:hover { 
+    transform: translateY(-3px); 
+    /* Shadow verde combinando com a animação snake */
+    box-shadow: 0 5px 15px rgba(46, 160, 67, 0.4); 
+}
+
+.card:hover { 
+    border-color: var(--accent-color); 
+}
+
+.card-icon { 
+    font-size: 2.5rem; 
+    color: var(--accent-color); 
+    margin-bottom: 1rem; 
 }
 
 * {
